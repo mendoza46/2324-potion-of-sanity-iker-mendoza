@@ -1,12 +1,16 @@
-import {getAllIngredients} from "./service.mjs";
+import {getData} from "./service.mjs";
+import { Ingredients } from "./ingredients.mjs";
 
-const fetchAsyncData = async () => {
+const execute = async () => {
     try{
-        const result = await getAllIngredients();
-        console.log(result);
-    } catch (error){
-        console.log(error.message);
+        const data = await getData();
+
+        //Creamos los ingredientes
+        const ingredients = Ingredients.load(data);
+
+    } catch{
+        //ERROR
     }
 } 
 
-fetchAsyncData();
+execute();
