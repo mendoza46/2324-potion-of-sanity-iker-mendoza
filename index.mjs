@@ -26,8 +26,9 @@ const execute = async () => {
         const potion4 = cauldron.createPotion("Nightshade", "Ectoplasm");
         showPotion(potion4);
 
-    } catch{
-        //ERROR
+    } catch (error) {
+        console.log(error)
+
     }
 } 
 

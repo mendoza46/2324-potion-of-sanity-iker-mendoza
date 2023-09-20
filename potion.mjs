@@ -1,3 +1,4 @@
+
 export class Potion {
     constructor(name, value, weight, time) {
         this.name   = name;
@@ -19,5 +20,17 @@ export class Potion {
 
     static sanity() {
         return new PotionOfSanity();
+    }
+}
+
+export class PotionOfSanity extends Potion{
+    constructor() {
+        super("Potion of Sanity", 1000, 1, 50);
+    }
+}
+
+export class FailedPotion extends Potion{
+    constructor() {
+        super("Failed potion", 0, 0, 0);
     }
 }

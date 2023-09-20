@@ -9,7 +9,7 @@ export class Effect {
     static from(name){
         return new Effect(
             name, 
-            positive_effect_tokens.some( token => name.includes(token)) ? 'beneficial' : 'harmful'
+            positive_effect_tokens.some(token => name.includes(token)) ? 'beneficial' : 'harmful'
         )
     }
 }

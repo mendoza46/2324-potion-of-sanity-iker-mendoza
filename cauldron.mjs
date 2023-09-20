@@ -3,7 +3,7 @@ import { Potion } from "./potion.mjs";
 
 class Cauldron {
     constructor(ingredients){
-        ingredients = Ingredient;
+        this.ingredients = ingredients;
     }
 
     createPotion = (ingredient_name1, ingredient_name2) => {
