@@ -5,7 +5,7 @@ import { Cauldron } from "./cauldron.mjs";
 const execute = async () => {
     try{
         const data = await getData();
-        // showIngredients(data);
+        showIngredients(data);
 
         //Creamos los ingredientes
         const ingredients = Ingredients.load(data);
