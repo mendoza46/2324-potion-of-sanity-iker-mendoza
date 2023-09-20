@@ -17,3 +17,15 @@ export class Ingredient{
         );
     }
 }
+
+export function hasName(name){
+    return this.name === name;
+}
+
+export function findCommonEffects(otherIngredient){
+    return this.effects.filter(effect => otherIngredient.hasEffect(effect));
+}
+
+export function hasEffect(effect) {
+    return this.effects.some(candidate => effect.name === candidate.name);
+}
